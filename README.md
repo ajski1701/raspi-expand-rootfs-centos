@@ -30,7 +30,7 @@ License
 -------
 Charles Korns' license can be found in LICENSE.charleskorn.raspi-expanded-rootfs
 
-A.J. Scgalski's license can be found in LICENSE.AJ1701.raspi-expand-rootfs-centos
+A.J. Scgalski's license can be found in LICENSE
 
 Author Information
 ------------------
