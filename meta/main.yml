@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: A.J. Scgalski
-  description: An Ansible role for automatically expanding the root filesystem of a Raspberry Pi running CentOS. Heavily based on Charles Korns' original playbook for expanding Raspian's root filesystem
+  description: An Ansible role for automatically expanding the root filesystem of a Raspberry Pi running CentOS.
   license: MIT
   min_ansible_version: 2.3
   platforms:
