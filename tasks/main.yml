@@ -1,0 +1,40 @@
+---
+- name: Check rootparitionsize space
+  shell: df -h | grep root | awk '{ print $2 }'
+  register: rootparitionsize
+  changed_when: false
+  failed_when: rootparitionsize.stderr != ""
+
+- name: Get device name
+  shell: lsblk | grep "/" | grep -v "boot" | sed 's/.*-//g' | awk '{ print $1 }'
+  register: ROOT_DEVICE_FULL_NAME
+  changed_when: false
+  failed_when: ROOT_DEVICE_FULL_NAME.stderr != ""
+
+- name: Get base device name
+  shell:  lsblk | grep "/" | grep -v "boot" | sed 's/.*-//g' | awk '{ print $1 }' | sed 's/.\{2\}$//'
+  register: DEVICE_BASE_NAME
+  changed_when: false
+  failed_when: DEVICE_BASE_NAME.stderr != ""
+
+- name: Get device number
+  shell: lsblk | grep "/" | grep -v "boot" | sed 's/.*-//g' | awk '{ print $1 }' | rev | cut -c -1 | rev
+  register: ROOT_DEVICE_PARTITION_NUMBER
+  changed_when: false
+  failed_when: ROOT_DEVICE_PARTITION_NUMBER.stderr != ""
+
+- name: Grow Partition
+  command: "sudo growpart /dev/{{ DEVICE_BASE_NAME.stdout }} {{ ROOT_DEVICE_PARTITION_NUMBER.stdout }}"
+  when: rootparitionsize.stdout == "2.0G"
+  notify:
+    - Restart
+    - Wait for restart to finish
+
+- name: Expand filesystem to fill disk
+  command: "sudo resize2fs /dev/{{ ROOT_DEVICE_FULL_NAME.stdout }}"
+  when: rootparitionsize.stdout == "2.0G"
+  notify:
+    - Restart
+    - Wait for restart to finish
+
+- meta: flush_handlers

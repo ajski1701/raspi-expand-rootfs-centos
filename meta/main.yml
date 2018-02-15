@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  author: AJ1701
+  description: An Ansible role for automatically expanding the root filesystem of a Raspberry Pi running CentOS.
+  license: MIT
+  min_ansible_version: 2.3
+  categories:
+  - system
+dependencies: []
