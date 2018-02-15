@@ -8,6 +8,7 @@ galaxy_info:
   - name: EL
     versions:
     - all
+  cloud: []
   galaxy_tags:
     - arm
     - system
