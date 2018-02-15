@@ -3,6 +3,8 @@ raspi-expand-rootfs-centos
 
 An Ansible role for automatically expanding the root filesystem of a Raspberry Pi running CentOS.
 
+Find it on [Ansible Galaxy](https://galaxy.ansible.com/AJ1701/raspi-expand-rootfs-centos/)!
+
 Requirements
 ------------
 
