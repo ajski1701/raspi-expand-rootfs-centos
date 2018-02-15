@@ -29,6 +29,7 @@ Example Playbook
 License
 -------
 Charles Korns' license can be found in LICENSE.charleskorn.raspi-expanded-rootfs
+
 AJ1701's license can be found in LICENSE.AJ1701.raspi-expand-rootfs-centos
 
 Author Information
