@@ -30,14 +30,14 @@ License
 -------
 Charles Korns' license can be found in LICENSE.charleskorn.raspi-expanded-rootfs
 
-AJ1701's license can be found in LICENSE.AJ1701.raspi-expand-rootfs-centos
+A.J. Scgalski's license can be found in LICENSE.AJ1701.raspi-expand-rootfs-centos
 
 Author Information
 ------------------
 
 Based off of the original Ansible playbook by Charles Korn ([me@charleskorn.com](me@charleskorn.com)). His original repository can be found at https://github.com/charleskorn/raspi-expanded-rootfs
 
-Modified for CentOS 7 ARM by [AJ1701](https://github.com/AJ1701)
+Modified for CentOS 7 ARM by [A.J. Scgalski](https://github.com/AJ1701). Please see my GitHub account for my contact email.
 
 Contributing
 ------------
