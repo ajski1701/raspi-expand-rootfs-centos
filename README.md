@@ -44,4 +44,4 @@ Modified for CentOS 7 ARM by [A.J.](https://github.com/ajski1701). Please see my
 Contributing
 ------------
 
-Submit issues and pull requests on GitHub at [https://github.com/AJ1701/raspi-expand-rootfs-centos](https://github.com/ajski1701/raspi-expand-rootfs-centos).
+Submit issues and pull requests on GitHub at [https://github.com/ajski1701/raspi-expand-rootfs-centos](https://github.com/ajski1701/raspi-expand-rootfs-centos).
